@@ -1,10 +1,9 @@
-function CarValue(props) {
-  
-  return (
-    <div>
-      Car value
-    </div>
-  );
+import { useSelector } from 'react-redux';
+
+function CarValue() {
+  const totalCost = 111;
+
+  return <div className="car-value">Total Cost: € {totalCost}</div>;
 }
 
-export default CarValue
+export default CarValue;
