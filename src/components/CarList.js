@@ -4,12 +4,13 @@ import { removeCar } from '../store';
 function CarList() {
   const dispatch = useDispatch();
 
-  // const cars = useSelector((state) => state.cars.data); // so this is destructured below
+  // const cars = useSelector( (state) => state.cars.data ); // so the BIG STATE is destructured below.
   // also 'cars' is used later to map through, so here is a good place to filter already what needs to be mapped
   // (we create a "derived state" - calculated from 2 small-states: data and searchTerm to create filtered cars )
   const cars = useSelector(({ cars: { data, searchTerm } }) => {
-    return data.filter((dataArrayEl) =>
-      dataArrayEl.name.toLowerCase().includes(searchTerm.toLowerCase()) // true if the search term is part of the name
+    return data.filter(
+      (dataArrayEl) =>
+        dataArrayEl.name.toLowerCase().includes(searchTerm.toLowerCase()) // true if the search term is part of the name
     );
   });
 
@@ -18,6 +19,7 @@ function CarList() {
   };
 
   const renderedCars = cars.map((car) => {
+    //
     return (
       <div key={car.id} className="panel">
         <p>
@@ -42,3 +44,11 @@ function CarList() {
 }
 
 export default CarList;
+
+// BIG STATE:
+//         {
+//            cars: {
+//                   searchTerm: '',
+//                   data: [id: 11, name: 'ford', cost: 150]
+//            }
+//        }
