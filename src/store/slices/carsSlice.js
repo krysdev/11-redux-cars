@@ -17,7 +17,7 @@ const carsSlice = createSlice({
       state.cars.push({
         name: action.payload.name,
         cost: action.payload.cost,
-        id: nanoid(),
+        id: nanoid(), // random id
       });
     },
     removeCar(state, action) {

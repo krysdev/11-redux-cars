@@ -1,7 +1,9 @@
 body {
-  margin: 20px;
+  margin: 0px;
+  padding: 20px;
   color: grey;
-  background-color: #303030;
-  font-size: 2em;
+  background-color: #3d3d3d;
+  font-size: 1em;
+  height: 100vh;
 }
 

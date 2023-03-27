@@ -9,10 +9,12 @@ const formSlice = createSlice({
   },
   reducers: {
     changeName(state, action) {
+      // action.payload === { name: 'string'}
       state.name = action.payload;
     },
 
     changeCost(state, action) {
+      // action.payload === { cost: 999}
       state.cost = action.payload;
     },
   },
