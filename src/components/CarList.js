@@ -26,11 +26,11 @@ function CarList() {
   const renderedCars = cars.map((carEl) => {
     // name1 --> state.form.name
     // if 'name1' is present/truthy then check if it matches (true/false)
-    const bold = name1 && carEl.name.toLowerCase().includes(name1.toLowerCase());
+    const mark = name1 && carEl.name.toLowerCase().includes(name1.toLowerCase());
 
     return (
-      // if const bold is true then use class 'bold'
-      <div key={carEl.id} className={`panel ${bold && 'bold'}`}>
+      // if const mark is true then use class 'mark-it'
+      <div key={carEl.id} className={`panel ${mark && 'mark-it'}`}>
         <p>
           {carEl.name} - € {carEl.cost}
         </p>
